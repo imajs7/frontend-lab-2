@@ -9,32 +9,32 @@ var correct = 0;
 
 const questions = [
     {
-        statement: "What is the color of Sun?",
+        statement: "What is the capital of Sweden?",
         choices : {
-            a : "Green",
-            b : "Blue",
-            c : "Yellow",
-            d : "Violet",
+            a : "Bratislava",
+            b : "Ankara",
+            c : "Stockholm",
+            d : "Svalbard",
         },
         answer: "c"
     },
     {
-        statement: "Which is a fruit?",
+        statement: "Which statement is true?",
         choices : {
-            a : "Eggplant",
-            b : "Carrot",
-            c : "Pineapple",
-            d : "Spinach",
+            a : "Naypyidaw is a lake",
+            b : "Georgia is a country",
+            c : "Azov is a mountain ",
+            d : "Chad is in Asia",
         },
-        answer: "c"
+        answer: "b"
     },
     {
-        statement: "Which is a water body?",
+        statement: "Which among these is a water body?",
         choices : {
-            a : "Lake",
-            b : "Hill",
-            c : "Desert",
-            d : "Plateau",
+            a : "Ontario",
+            b : "Kavaratti",
+            c : "Sirocco",
+            d : "Santa Maria",
         },
         answer: "a"
     },
@@ -51,10 +51,10 @@ const questions = [
     {
         statement: "Which among these is a metal?",
         choices : {
-            a : "Graphene",
-            b : "Lignite",
+            a : "Silicon",
+            b : "Nitrogen",
             c : "Sodium",
-            d : "Neon",
+            d : "Carbon",
         },
         answer: "c"
     },
@@ -67,7 +67,8 @@ function nextQ() {
 }
 
 function declareAnswer() {
-    alert("Your Score: " + correct + " / " + questions.length + " ( " + ( correct * 100 ) / questions.length + "% )");
+    const percent = ( correct * 100 ) / questions.length;
+    alert(`Your Score: ${correct} / ${questions.length} ( ${percent}% )`);
 }
 
 function checkAnswer(selected) {
