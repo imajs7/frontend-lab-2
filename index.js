@@ -1,8 +1,7 @@
 const questionEl = document.querySelector("#question");
 const choiceBtns = document.querySelectorAll(".buttons > button");
 const choiceSpans = document.querySelectorAll(".buttons > button > span");
-const currentQ = document.querySelector("#currentq");
-const totalQ = document.querySelector("#totalq");
+const progress = document.querySelector("#progress");
 
 var qno = 0;
 var correct = 0;
@@ -109,8 +108,7 @@ function setQuiz() {
     choiceSpans[1].innerText = questions[qno].choices.b;
     choiceSpans[2].innerText = questions[qno].choices.c;
     choiceSpans[3].innerText = questions[qno].choices.d;
-    currentQ.innerText = qno + 1;
-    totalQ.innerText = questions.length;
+    progress.innerText = `Question ${(qno+1)} of ${questions.length}`;
 }
 
 window.addEventListener( 'load', setQuiz );
