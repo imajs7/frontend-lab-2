@@ -68,7 +68,7 @@ function nextQ() {
 function declareAnswer() {
     const quizArea = document.querySelector("#quiz");
     const percent = ( correct * 100 ) / questions.length;
-    quizArea.innerHTML = `<h1>Your Score: ${correct} / ${questions.length} <br />( ${percent}% )</h1>`;
+    quizArea.innerHTML = `<h1>Result</h1><h2 id="score">Your Score: ${correct} / ${questions.length} <br />( ${percent}% )</h2>`;
 }
 
 function checkAnswer(selected) {
