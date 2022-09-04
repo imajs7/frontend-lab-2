@@ -66,8 +66,9 @@ function nextQ() {
 }
 
 function declareAnswer() {
+    const quizArea = document.querySelector("#quiz");
     const percent = ( correct * 100 ) / questions.length;
-    alert(`Your Score: ${correct} / ${questions.length} ( ${percent}% )`);
+    quizArea.innerHTML = `<h1>Your Score: ${correct} / ${questions.length} <br />( ${percent}% )</h1>`;
 }
 
 function checkAnswer(selected) {
@@ -119,8 +120,7 @@ choiceBtns.forEach(element => {
         nextQ();
         if( qno == questions.length ) {
             declareAnswer();
-            qno = 0;
-            correct = 0;
+            return;
         }
         setQuiz();
     } );
